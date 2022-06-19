@@ -1,8 +1,6 @@
 import java.awt.event.ActionListener;
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Window.Type;
 import java.text.DecimalFormat;
@@ -32,7 +30,7 @@ public class Receipt extends JFrame {
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
         
 		JLabel lblNewLabel = new JLabel("");
-		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\USER\\eclipse-workspace\\SWC2333 GROUP PROJECT\\pictures\\blackPink.jpg"));
+		lblNewLabel.setIcon(new ImageIcon(this.getClass().getResource("/blackPink.jpg")));
 		lblNewLabel.setBounds(101, 10, 187, 81);
 		contentPane.add(lblNewLabel);
 		
