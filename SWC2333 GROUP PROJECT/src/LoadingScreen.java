@@ -1,8 +1,8 @@
-
 import javax.swing.*;
 import java.awt.*;
- 
-public class LoadingScreen extends JFrame{
+
+//create class for LoadingScreen 
+public class LoadingScreen extends JFrame{ //create class for loadingScreen
     JFrame frame;
     JLabel image = new JLabel(new ImageIcon(this.getClass().getResource("/poster.png")));
     JLabel text=new JLabel("WELCOME");
@@ -19,7 +19,7 @@ public class LoadingScreen extends JFrame{
         runningPBar();
     }
     public void createGUI(){
-        frame=new JFrame();
+        frame=new JFrame(); //create new frame
         frame.getContentPane().setLayout(null);
         frame.setUndecorated(true);
         frame.setSize(600,400);
@@ -35,11 +35,11 @@ public class LoadingScreen extends JFrame{
     }
     public void addText()
     {
-        text.setBackground(new Color(255, 105, 180));
-        text.setFont(new Font("Rockwell", Font.BOLD, 30));
-        text.setBounds(203,233,187,40);
-        text.setForeground(new Color(239,141,174));
-        frame.getContentPane().add(text);
+        text.setBackground(new Color(255, 105, 180));//Setting colour
+        text.setFont(new Font("Rockwell", Font.BOLD, 30));//Setting font properties
+        text.setBounds(203,233,187,40);//Setting the size and location of the label
+        text.setForeground(new Color(239,141,174));//Setting foreground Color
+        frame.getContentPane().add(text);//adding label to the frame
     }
     public void addMessage()
     {
@@ -49,12 +49,12 @@ public class LoadingScreen extends JFrame{
         frame.getContentPane().add(message);//adding label to the frame
     }
     public void addProgressBar(){
-        progressBar.setBounds(10,356,580,16);
+        progressBar.setBounds(10,356,580,16);//Setting the size and location of the label
         progressBar.setBorderPainted(true);
         progressBar.setStringPainted(true);
         progressBar.setBackground(Color.WHITE);
-        progressBar.setForeground(new Color(239,141,174));
-        frame.getContentPane().add(progressBar);
+        progressBar.setForeground(new Color(239,141,174));//Setting foreground Color
+        frame.getContentPane().add(progressBar);//adding label to the frame
     }
     public void runningPBar(){
         int i=0;//Creating an integer variable and intializing it to 0

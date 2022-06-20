@@ -21,6 +21,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+//create class for lightStick
 public class LightStick_PC extends JFrame {
 
 	private JPanel contentPane;
@@ -43,18 +44,21 @@ public class LightStick_PC extends JFrame {
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
+        //create new label
 		JLabel lblNewLabel = new JLabel("DOES THE CUSTOMER ALSO WANT TO INCLUDE A LIGHTSTICK WITH THE PURCHASE? (5% OFF)");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblNewLabel.setForeground(new Color(239,141,174));
 		lblNewLabel.setBounds(10, 10, 593, 13);
 		contentPane.add(lblNewLabel);
 		
+		//create new label
 		JLabel lblLS = new JLabel("");
 		Image lightstick = new ImageIcon(this.getClass().getResource("/lightstick.jpeg")).getImage();
 		lblLS.setIcon(new ImageIcon(lightstick));
 		lblLS.setBounds(165, 37, 169, 156);
 		contentPane.add(lblLS);
 		
+		//create new radio button (YES)
 		JRadioButton rdbtnYes = new JRadioButton("YES");
 		buttonGroupLS.add(rdbtnYes);
 		rdbtnYes.setBackground(new Color(239,141,174));
@@ -63,6 +67,7 @@ public class LightStick_PC extends JFrame {
 		rdbtnYes.setBounds(30, 199, 195, 21);
 		contentPane.add(rdbtnYes);
 		
+		//create new radio button (NO)
 		JRadioButton rdbtnNo = new JRadioButton("NO");
 		buttonGroupLS.add(rdbtnNo);
 		rdbtnNo.setBackground(new Color(239,141,174));
@@ -70,42 +75,49 @@ public class LightStick_PC extends JFrame {
 		rdbtnNo.setBounds(283, 199, 200, 21);
 		contentPane.add(rdbtnNo);
 		
+		//create new label
 		JLabel lblaskPC1 = new JLabel("DOES THE CUSTOMER ALSO WANT THE LIMITED EDITION PHOTOCARD? ");
 		lblaskPC1.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblaskPC1.setForeground(new Color(239,141,174));
 		lblaskPC1.setBounds(10, 226, 682, 13);
 		contentPane.add(lblaskPC1);
 		
+		//create new label
 		JLabel lblaskPC2 = new JLabel("(CAN ONLY CHOOSE ONE MEMBER PHOTOCARD PER CUSTOMER)");
 		lblaskPC2.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblaskPC2.setForeground(new Color(239,141,174));
 		lblaskPC2.setBounds(10, 239, 682, 13);
 		contentPane.add(lblaskPC2);
 		
+		//create new label
 		JLabel lblJisoo = new JLabel("");
 		Image jisoo = new ImageIcon(this.getClass().getResource("/jisoo.jpg")).getImage();
 		lblJisoo.setIcon(new ImageIcon(jisoo));
 		lblJisoo.setBounds(30, 262, 195, 195);
 		contentPane.add(lblJisoo);
 		
+		//create new label
 		JLabel lblJennie = new JLabel("");
 		Image jennie = new ImageIcon(this.getClass().getResource("/jennie.jpg")).getImage();
 		lblJennie.setIcon(new ImageIcon(jennie));
 		lblJennie.setBounds(288, 262, 195, 195);
 		contentPane.add(lblJennie);
 		
+		//create new label
 		JLabel lblRose = new JLabel("");
 		Image rose = new ImageIcon(this.getClass().getResource("/rose.jpg")).getImage();
 		lblRose.setIcon(new ImageIcon(rose));
 		lblRose.setBounds(70, 501, 140, 195);
 		contentPane.add(lblRose);
 		
+		//create new label
 		JLabel lblLisa = new JLabel("");
 		Image lisa = new ImageIcon(this.getClass().getResource("/lisa.jpg")).getImage();
 		lblLisa.setIcon(new ImageIcon(lisa));
 		lblLisa.setBounds(321, 501, 140, 195);
 		contentPane.add(lblLisa);
 		
+		//create new checkBox (JISOO)
 		JCheckBox chckbxJisoo = new JCheckBox("JISOO");
 		buttonGroupPC.add(chckbxJisoo);
 		chckbxJisoo.setBackground(new Color(239,141,174));
@@ -113,6 +125,7 @@ public class LightStick_PC extends JFrame {
 		chckbxJisoo.setBounds(97, 463, 93, 21);
 		contentPane.add(chckbxJisoo);
 		
+		//create new checkBox (JENNIE)
 		JCheckBox chckbxJennie = new JCheckBox("JENNIE");
 		buttonGroupPC.add(chckbxJennie);
 		chckbxJennie.setBackground(new Color(239,141,174));
@@ -120,7 +133,7 @@ public class LightStick_PC extends JFrame {
 		chckbxJennie.setBounds(340, 463, 93, 21);
 		contentPane.add(chckbxJennie);
 		
-		
+		//create new checkBox (ROSE)
 		JCheckBox chckbxRose = new JCheckBox("ROSE'");
 		buttonGroupPC.add(chckbxRose);
 		chckbxRose.setBackground(new Color(239,141,174));
@@ -128,6 +141,7 @@ public class LightStick_PC extends JFrame {
 		chckbxRose.setBounds(97, 702, 93, 21);
 		contentPane.add(chckbxRose);
 		
+		//create new checkBox (LISA)
 		JCheckBox chckbxLisa = new JCheckBox("LISA");
 		buttonGroupPC.add(chckbxLisa);
 		chckbxLisa.setBackground(new Color(239,141,174));
@@ -135,6 +149,7 @@ public class LightStick_PC extends JFrame {
 		chckbxLisa.setBounds(340, 702, 93, 21);
 		contentPane.add(chckbxLisa);
 		
+		//create new button (PROCEED)
 		JButton btnProceed = new JButton("PROCEED");
 		btnProceed.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -172,6 +187,7 @@ public class LightStick_PC extends JFrame {
 				double amountPayed = 0.0;
 				String paymentMethod = "";
 				
+				//calculate total payment
 				total_payment b = new total_payment(price, name, IC, LSprice, PCprice, seat, total, balance, amountPayed, paymentMethod , PCmember);
 				b.show();
 				dispose();

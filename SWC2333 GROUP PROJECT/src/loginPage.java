@@ -11,6 +11,7 @@ import javax.swing.JLabel;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+//create class for LoginPage
 public class loginPage extends JFrame {
 
 	private JPanel contentPane;
@@ -50,30 +51,35 @@ public class loginPage extends JFrame {
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
+        //create new label for (USERNAME)
 		JLabel lblUsername = new JLabel("USERNAME : ");
 		lblUsername.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblUsername.setForeground(new Color(239,141,174));
 		lblUsername.setBounds(242, 155, 82, 13);
 		contentPane.add(lblUsername);
 		
+		//create new PasswordField
 		passwordField = new JPasswordField();
 		passwordField.setBounds(322, 178, 160, 19);
 		contentPane.add(passwordField);
 		
+		//create new label for (PASSWORD)
 		JLabel lblPassword = new JLabel("PASSWORD :  ");
 		lblPassword.setForeground(new Color(239, 141, 174));
 		lblPassword.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblPassword.setBounds(242, 181, 82, 13);
 		contentPane.add(lblPassword);
 		
+		//create new TextField
 		textUsername = new JTextField();
 		textUsername.setBounds(322, 152, 160, 19);
 		contentPane.add(textUsername);
 		textUsername.setColumns(10);
 		
+		//create new Button for (LOGIN)
 		JButton btnNewButton = new JButton("LOGIN");
 		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) {//create staff ID
 				
 				String staffName = textUsername.getText();
 				int password = Integer.parseInt(passwordField.getText());				
@@ -88,7 +94,7 @@ public class loginPage extends JFrame {
 						a.show();
 						dispose();
 					}
-					else if (staffName.equalsIgnoreCase("zik") && password == 523) {	
+					else if (staffName.equalsIgnoreCase("zikry") && password == 523) {	
 						custInfo_Seat a = new custInfo_Seat();
 						a.show();
 						dispose();
@@ -105,7 +111,7 @@ public class loginPage extends JFrame {
 				}
 			});
 		btnNewButton.setFont(new Font("Mongolian Baiti", Font.BOLD, 10));
-		btnNewButton.setBackground(new Color(239, 141, 174));
+		btnNewButton.setBackground(new Color(239, 141, 174));//Setting background Color
 		btnNewButton.setBounds(332, 207, 85, 21);
 		contentPane.add(btnNewButton);
 			

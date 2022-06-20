@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.border.TitledBorder;
 import javax.swing.border.EtchedBorder;
 
+//create class for custInfo seat
 public class custInfo_Seat extends JFrame {
 
 	private JPanel contentPane;
@@ -21,12 +22,13 @@ public class custInfo_Seat extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
 	public custInfo_Seat() {
-		setTitle("BLACKPINK CONCERT");
+		setTitle("BLACKPINK CONCERT"); //set title of the frame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 805, 384);
+		setBounds(100, 100, 805, 384); 
 		contentPane = new JPanel();
-		contentPane.setBackground(new Color(0, 0, 0));
+		contentPane.setBackground(new Color(0, 0, 0)); 
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -34,38 +36,44 @@ public class custInfo_Seat extends JFrame {
 		Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
         this.setLocation(dim.width/2-this.getSize().width/2, dim.height/2-this.getSize().height/2);
 		
+        // create new label (NAME)
 		JLabel lblNameLabel = new JLabel("NAME");
 		lblNameLabel.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblNameLabel.setForeground(new Color(239,141,174));
 		lblNameLabel.setBounds(5, 10, 426, 13);
 		contentPane.add(lblNameLabel);
 		
-		nameTextField = new JTextField();
+		// create new textfield
+		nameTextField = new JTextField(); 
 		nameTextField.setForeground(Color.PINK);
 		nameTextField.setBackground(Color.BLACK);
 		nameTextField.setBounds(5, 22, 426, 19);
 		contentPane.add(nameTextField);
 		nameTextField.setColumns(10);
 		
-		JLabel lblICLabel = new JLabel("IC");
+		// create new label (IC)
+		JLabel lblICLabel = new JLabel("IC"); 
 		lblICLabel.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblICLabel.setForeground(new Color(239,141,174));
 		lblICLabel.setBounds(5, 50, 45, 13);
 		contentPane.add(lblICLabel);
 		
-		ICtextField = new JTextField();
+		//create new textfield
+		ICtextField = new JTextField(); 
 		ICtextField.setForeground(Color.PINK);
 		ICtextField.setBackground(Color.BLACK);
 		ICtextField.setBounds(5, 62, 426, 19);
 		contentPane.add(ICtextField);
 		ICtextField.setColumns(10);
 		
-		JLabel lblSeatLabel = new JLabel("PREFERRED SEAT");
+		//create new label (PREFERRED SEAT)
+		JLabel lblSeatLabel = new JLabel("PREFERRED SEAT"); 
 		lblSeatLabel.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblSeatLabel.setForeground(new Color(239,141,174));
 		lblSeatLabel.setBounds(5, 91, 110, 13);
 		contentPane.add(lblSeatLabel);
 		
+		// price according to seat color
 		String seat[] = {"","YELLOW - RM1499.00","BLUE - RM1299.00","DARK GREEN - RM899.00","PINK - RM799.00","RED - RM699.00","MAGENTA - RM599.00","GREY - RM499.00","ORANGE - RM399.00", "LIGHT GREEN - RM299.00", "CYAN - RM199.00"};
 		final JComboBox comboBox = new JComboBox(seat);
 		comboBox.setBackground(Color.BLACK);
@@ -73,6 +81,7 @@ public class custInfo_Seat extends JFrame {
 		comboBox.setBounds(5, 106, 426, 21);
 		contentPane.add(comboBox);
 		
+		//create new panel
 		JPanel panel = new JPanel();
 		panel.setBackground(Color.BLACK);
 		panel.setForeground(new Color(239,141,174));
@@ -81,24 +90,28 @@ public class custInfo_Seat extends JFrame {
 		contentPane.add(panel);
 		panel.setLayout(null);
 		
-		JLabel lblCustName = new JLabel("");
+		//create new label
+		JLabel lblCustName = new JLabel(""); 
 		lblCustName.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblCustName.setForeground(new Color(255, 153, 204));
 		lblCustName.setBounds(10, 21, 406, 13);
 		panel.add(lblCustName);
 		
+		//create new label
 		JLabel lblCustIC = new JLabel("");
 		lblCustIC.setForeground(new Color(255, 153, 204));
 		lblCustIC.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblCustIC.setBounds(10, 44, 406, 13);
 		panel.add(lblCustIC);
 		
+		//create new label
 		JLabel lblCustSeat = new JLabel("");
 		lblCustSeat.setForeground(new Color(255, 153, 204));
 		lblCustSeat.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblCustSeat.setBounds(10, 67, 406, 13);
 		panel.add(lblCustSeat);
 		
+		//create new Button (OK)
 		JButton btnNewButton = new JButton("OK");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -112,15 +125,18 @@ public class custInfo_Seat extends JFrame {
 				
 			}
 		});
+		
 		btnNewButton.setBackground(new Color(239,141,174));
 		btnNewButton.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnNewButton.setBounds(10, 298, 253, 39);
 		contentPane.add(btnNewButton);
 		
+		//create new Jbutton (NEXT) 
 		JButton btnOkButton = new JButton("NEXT");
 		btnOkButton.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnOkButton.setBackground(new Color(239,141,174));
 		btnOkButton.addActionListener(new ActionListener() {
+			
 			public void actionPerformed(ActionEvent e) {
 				
 				String name = nameTextField.getText();
@@ -182,6 +198,7 @@ public class custInfo_Seat extends JFrame {
 		btnOkButton.setBounds(532, 298, 249, 39);
 		contentPane.add(btnOkButton);
 		
+		//create new button (CLEAR)
 		JButton btnCloseButton = new JButton("CLEAR");
 		btnCloseButton.setFont(new Font("Tahoma", Font.BOLD, 10));
 		btnCloseButton.setBackground(new Color(239,141,174));
@@ -199,6 +216,7 @@ public class custInfo_Seat extends JFrame {
 		btnCloseButton.setBounds(273, 298, 249, 39);
 		contentPane.add(btnCloseButton);
 		
+		//create new label
 		JLabel lblSeating = new JLabel("");
 		Image seating = new ImageIcon(this.getClass().getResource("/seatingedited.png")).getImage();
 		lblSeating.setIcon(new ImageIcon(seating));
