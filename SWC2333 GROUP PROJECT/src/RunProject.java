@@ -4,6 +4,5 @@ public class RunProject {
 		new LoadingScreen();
 		loginPage a = new loginPage();
 		a.show();
-		
 	}
 }

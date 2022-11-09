@@ -22,7 +22,6 @@ public class custInfo_Seat extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	
 	public custInfo_Seat() {
 		setTitle("BLACKPINK CONCERT"); //set title of the frame
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

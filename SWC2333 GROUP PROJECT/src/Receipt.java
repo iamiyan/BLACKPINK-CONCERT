@@ -1,13 +1,7 @@
-import java.awt.event.ActionListener;
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.Window.Type;
 import java.text.DecimalFormat;
-import java.io.*;
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
 
 //create class for Receipt
 public class Receipt extends JFrame {
@@ -202,4 +196,5 @@ public class Receipt extends JFrame {
 		
 		
 	}
+	
 }

@@ -22,10 +22,10 @@ public class total_payment extends JFrame {
 	private final ButtonGroup buttonGroup = new ButtonGroup();
 	private JTextField textAmountPayed;
 
-
 	/**
 	 * Create the frame.
 	 */
+	
 	public total_payment(double price, String name, String IC, double LSprice, double PCprice ,String seat ,double total, double balance, double amountPayed, String paymentMethod, String PCmember) {
 		DecimalFormat formatter = new DecimalFormat("#0.00");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
